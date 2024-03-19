@@ -37,7 +37,7 @@ public class CommentController {
     //http://localhost:8082/api/comments/{postId}
     public ResponseEntity<?> getCommentByPostId(@PathVariable String postId){
 
-        ser.getCommentByPostId(postId)
+        List<Comment> data = ser.getCommentByPostId(postId);
 
         return new ResponseEntity<>(data,HttpStatus.OK);
     }
